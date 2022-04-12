@@ -1,0 +1,24 @@
+{% extends 'main/base.html'%}
+Вторая страница
+{% block title %}
+{% endblock %}
+{% block content %}
+<font size="5" color="red">Время до взрыва:</font>
+<script src="//megatimer.ru/get/991f8b23322958fbfd17d47053277d24.js"></script>
+<p></p>
+ <img src="/static/img/14.png" >
+<p></p>
+<hr></hr>
+<p id="sample_typeit" data-typeit-id="7796100">Мы уже возле цели. Но проходя по коридору, мы заметили нашего друга, которого так же заперли в клетке. Нужно ему помочь выбраться!<span class="ti-cursor with-delay" style="display: inline; color: rgb(36, 41, 46); font: 24px / 30px -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; margin: 0px -4.875px 0px -0.875px;">|</span></p>
+<script src="https://prowebmastering.ru/cdn/typeit.min.js"></script>
+<hr></hr>
+<script>
+new TypeIt("#sample_typeit", {
+  strings: "",
+  waitUntilVisible: true
+}).go();
+</script>
+<div class="container-buttons">
+<a href="/bthree" class="btn btn-lg btn-secondary fw-bold border-white bg-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" color="green">Продолжить</font></font></a>
+</div>
+{% endblock %}

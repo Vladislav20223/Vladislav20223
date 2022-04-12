@@ -1,0 +1,329 @@
+{% extends 'main/base.html'%}
+Восьмая страница
+{% block title %}
+{% endblock %}
+{% block content %}
+<h5>Оставшееся время:</h5>
+<script  src="//megatimer.ru/get/614a078516dac3cb5a70100d45cd2689.js" ></script>
+<p></p>
+<a>Электричество успешно отключено! Теперь пока никто не видит, можно просмотреть на камерах видеонаблюдения, где надится выход на свободу. Благо у нас есть дополнительный аккамулятор, чтобы запусть видео. </a>
+<p></p>
+<a>Чтобы узнать, в каком отделе сейчас находятся вирусы, необходимо собрать слово и перевести его с помощью азбуки-морзе, которое находится ниже. Правильное решение и есть место, где на данный момент обитают вирусы.</a>
+<p></p>
+<p  class="fig">
+     <img src="/static/img/123.png" width="700" >
+</p>
+
+
+<a>(Не забывайте собирать цифры, после каждого решеного задания. Они ещё нам пригодятся)</a>
+<p></p>
+    <style>
+   .fig {
+    text-align: center;
+   }
+  </style>
+
+</head>
+
+<body>
+<script>
+function press() {
+let form = document.forms.form4;
+let ans = form.elements.input1;
+  if(ans.value.toLowerCase() == "дисковод")
+  {
+    tr.style.cssText=`animation: true 3s infinite ease-in-out;
+    color: white;
+    border-radius: 0px 20px 20px 0px;`;
+    input1.style.cssText=`
+    animation: true 3s infinite ease-in-out;
+    border:none;
+    padding:3px;
+    color: black;`;
+    textError.innerHTML = '<h3>Молодец! (Цифра: 0)<h3> <a href="/fiveseven" class="btn btn-lg btn-secondary fw-bold border-white bg-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" color="green" >Продолжить</font></font></a> ';
+    textError.style.cssText=`font-family: "Arial";`;
+  }
+  else
+  {
+    tr.style.cssText=`animation: false 3s infinite ease-in-out;
+    color: white;
+    border-radius: 0px 20px 20px 0px;`;
+    input1.style.cssText=`
+    animation: false 3s infinite ease-in-out;
+    border: none;
+    padding:3px;
+    color: black;`;
+    textError.innerHTML = '<h3> Ответ неверный! Подумай лучше!<h3>';
+    textError.style.cssText=`font-family: "Arial";`;
+  }
+}
+
+</script>
+<div class="container-buttons">
+<form name="form4">
+    <input name="input1" type="text" placeholder="Ответить на вопрос" class="form-control" id="input1" ><br>
+<input  class="butt" value="Ответить"  onclick="press()" type="button">
+
+       <div id="tr">
+           <p></p>
+    <p id="textError"></p>
+</form>
+    </form>
+</body>
+
+<p></p>
+
+<p></p>
+<div   id="sales"> &nbsp; &nbsp;<input class="b" type="button" value="Подсказка" onclick="buy()" /></div>
+<script>
+var sales_div = document.getElementById("sales");
+function buy(){
+sales.innerHTML = 'Чтобы решить данное задание, необходимо с помощью лабиранта найти правильную последовательность букв и перевести их в азбуку-морзе. <p></p> <img src="/static/img/134.jpg" width="600" > <input class="b" type="button" value="Свернуть" onclick="cancel()" />';
+}
+function cancel(){
+sales.innerHTML = ' &nbsp; &nbsp; <input class="b" type="button" value="Подсказка" onclick="buy()" />';
+}
+</script>
+<p></p>
+
+<div></div>
+<hr></hr>
+ <body>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=windows-1251' />
+<script src='http://code.jquery.com/jquery-latest.js'></script>
+<!--
+<script src="https://code.angularjs.org/1.3.9/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.3.9/angular-route.js"></script>
+-->
+<script type='text/javascript'>
+
+
+function validate_form() {
+  var name = $('#contact_name').val();
+  if (name == '') {} else {
+     $('#names').append('<p>' + name + '&nbsp; <button  class="bnn" onclick=$(this).parent("p").remove();>X</button></p>');
+  };
+  return false;
+}
+
+
+
+</script>
+</head>
+<body>
+ <h4>Заметки:</h4>
+<div id='names'></div>
+<div class="popup">
+    <div class="block">
+        <form name="contact_form" onsubmit="return validate_form();">
+<p></p>
+            <input type="text" name="contact_name" id="contact_name" placeholder="Добавить текст"><br>
+            <p></p>
+
+     <div>  &nbsp; &nbsp;<input  class="bn" type="submit" value="Добавить"></div>
+        </form>
+    </div>
+</div>
+</body>
+<hr></hr>
+
+<style >
+
+.bn {
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 0 15px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	font-weight: 700;
+	text-decoration: none;
+	color: #fff;
+	background-color: #1a73e8;
+	position: relative;
+	overflow:hidden;
+	vertical-align: top;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;
+	z-index: 1;
+}
+.bn span{
+	position: absolute;
+	background: #fff;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	pointer-events: none;
+	animation: bn_ripples 0.6s linear infinite;
+}
+@keyframes bn_ripples {
+	0% {
+		width: 0px;
+		height: 0px;
+		opacity: 0.5;
+	}
+	100% {
+		width: 1000px;
+		height: 1000px;
+		opacity: 0;
+	}
+}
+.bn:hover {
+	box-shadow: 0 1px 2px 0 rgb(26 115 232 / 45%), 0 1px 3px 1px rgb(26 115 232 / 30%);
+	background-color: #297be6;
+}
+.bn:active {
+	box-shadow: 0 1px 2px 0 rgb(26 115 232 / 45%), 0 2px 6px 2px rgb(26 115 232 / 30%);
+	background-color: #1a73e8 !important;
+}
+.bn:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+.bn:disabled {
+	pointer-events: none;
+	opacity: 0.65;
+}
+</style>
+
+        <style >
+
+.bnn {
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 0 15px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	font-weight: 700;
+	text-decoration: none;
+	color: #fff;
+	background-color: #e81a43;
+	position: relative;
+	overflow:hidden;
+	vertical-align: top;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;
+	z-index: 1;
+}
+.bnn span{
+	position: absolute;
+	background: #fff;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	pointer-events: none;
+	animation: bnn_ripples 0.6s linear infinite;
+}
+@keyframes bnn_ripples {
+	0% {
+		width: 0px;
+		height: 0px;
+		opacity: 0.5;
+	}
+	100% {
+		width: 1000px;
+		height: 1000px;
+		opacity: 0;
+	}
+}
+.bnn:hover {
+	box-shadow: 0 1px 2px 0 rgb(252 26 128 / 45%), 0 1px 3px 1px rgb(252 26 128 / 30%);
+	background-color: #e6293c;
+}
+.bnn:active {
+	box-shadow: 0 1px 2px 0 rgb(252 26 128 / 45%), 0 2px 6px 2px rgb(252 26 128 / 30%);
+	background-color: #e81a43 !important;
+}
+.bnn:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+.bnn:disabled {
+	pointer-events: none;
+	opacity: 0.65;
+}
+</style>
+
+<script>
+const buttons = document.querySelectorAll(".btn");
+buttons.forEach((button) => {
+	button.onclick = function(e){
+		let x = e.clientX - e.target.offsetLeft;
+		let y = e.clientY - e.target.offsetTop;
+		let ripple = document.createElement("span");
+		ripple.style.left = `${x}px`;
+		ripple.style.top = `${y}px`;
+		this.appendChild(ripple);
+		setTimeout(function(){
+			ripple.remove();
+		}, 600);
+	}
+});
+</script>
+
+<style type="text/css">
+
+.b {
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 0 20px;
+	margin: 0 15px 15px 0;
+	outline: none;
+	border: none;
+	border-radius: 6px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 17px;
+	font-weight: 700;
+	text-decoration: none;
+	color: #385898;
+	background-color: #e7f3ff;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;
+}
+.b:focus-visible {
+	box-shadow: 0 0 0 2px #666;
+}
+.b:hover {
+	background-color: #DBE7F2;
+}
+.b:active {
+	transform: scale(0.96);
+}
+.b:disabled {
+	pointer-events: none;
+	opacity: 0.65;
+}
+</style>
+
+  <style>
+.butt {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: rgb(64,199,129);
+  box-shadow: 0 -3px rgb(53,167,110) inset;
+  transition: 0.2s;
+}
+.butt:hover { background: rgb(53, 167, 110); }
+.butt:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}
+</style>
+
+{% endblock %}

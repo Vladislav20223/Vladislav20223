@@ -1,0 +1,24 @@
+{% extends 'main/base.html'%}
+Вторая страница
+{% block title %}
+{% endblock %}
+{% block content %}
+<h5>Оставшееся время:</h5>
+<script  src="//megatimer.ru/get/614a078516dac3cb5a70100d45cd2689.js" ></script>
+<p></p>
+<img src="/static/img/3.png" >
+<p></p>
+<hr></hr>
+<p id="sample_typeit" data-typeit-id="7796100">Уходя из комнаты вирус обранил бумажку с ключём от двери. Но просто так им воспользоваться не получится. Для активации ключа необходимо разгодать ребус, который написан на бумажке. Правильный ответ от него и есть ключ от нашей двери.<span class="ti-cursor with-delay" style="display: inline; color: rgb(36, 41, 46); font: 24px / 30px -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; margin: 0px -4.875px 0px -0.875px;">|</span></p>
+<script src="https://prowebmastering.ru/cdn/typeit.min.js"></script>
+<hr></hr>
+<script>
+new TypeIt("#sample_typeit", {
+  strings: "",
+  waitUntilVisible: true
+}).go();
+</script>
+<div class="container-buttons">
+<a href="/threee" class="btn btn-lg btn-secondary fw-bold border-white bg-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" color="green">Продолжить</font></font></a>
+</div>
+{% endblock %}

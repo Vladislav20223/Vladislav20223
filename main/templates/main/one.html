@@ -1,0 +1,29 @@
+{% extends 'main/base.html'%}
+Первая страница
+{% block title %}
+{% endblock %}
+{% block content %}
+<h5>Оставшееся время:</h5>
+<script  src="//megatimer.ru/get/614a078516dac3cb5a70100d45cd2689.js"  ></script>
+<p></p>
+<img src="/static/img/22.png" >
+
+<hr></hr>
+<p id="sample_typeit" data-typeit-id="7796100">Однажды злые вирусы пробрались тайком в компьютер и начали крушить все на своем пути. Антивирус попытался остановить их, но те оказались намного сильнее его. Они взяли антивируса в заложники и посадили его пустую комнату, что он не смог выбраться.<span class="ti-cursor with-delay" style="display: inline; color: rgb(36, 41, 46); font: 24px / 30px -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; margin: 0px -4.875px 0px -0.875px;">|</span></p>
+
+<script src="https://prowebmastering.ru/cdn/typeit.min.js"></script>
+
+<script>
+new TypeIt("#sample_typeit", {
+  strings: "",
+  waitUntilVisible: true
+}).go();
+</script>
+<hr></hr>
+<div class="container-buttons">
+<a href="/two" class="btn btn-lg btn-secondary fw-bold border-white bg-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" color="green">Продолжить</font></font></a>
+</div>
+
+{% endblock %}
+
+

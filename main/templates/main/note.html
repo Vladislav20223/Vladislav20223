@@ -1,0 +1,38 @@
+{% extends "default.html" %}
+{% block title %}{{ page.book.title }}: {{ page.title }}{% endblock %}
+{% block body %}
+  <div class="single-column">
+    <h1><a href="{% url 'book' page.book.id %}">{{ page.book.title }} ({{ page.title }})</a>: Заметка</h1>
+    <form method="POST" style="display: grid;"
+          action="{% url 'update_note' page.book.id note.id %}">
+      {% csrf_token %}
+      <label for="memo-text">Добавьте свою заметку</label>
+      <textarea id="memo-text" name="text">{{ note.text }}</textarea>
+      <label for="memo-page">Привязка
+        <select id="memo-page" name="page">
+          {% if note.page %}
+            <option value="keep"
+                    {% if note.page.id != page.id %}
+                    selected
+                    {% endif %}
+            >Оставить привязанной к [{{ note.page.title }}]</option>
+          {% endif %}
+          {% if not note.page or note.page.id != page.id %}
+            <option value="change">Привязать к [{{ page.title }}]</option>
+          {% endif %}
+          <option value="remove"
+                  {% if not note.page %}
+                  selected
+                  {% endif %}
+          >{% if note.page %}Отвязать{% endif %}</option>
+        </select>
+      </label>
+      <label for="memo-pinned">
+        Закреплена
+        <input id="memo-pinned" name="pinned" type="checkbox"
+               {% if note.pinned %}checked{% endif %}>
+      </label>
+      <button type="submit">Обновить</button>
+    </form>
+  </div>
+{% endblock %}
